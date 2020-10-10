@@ -1,17 +1,10 @@
 language: python
-
 python:
-  -3.8
+  - 3.8
 
 install:
-  - pip install pipenv pytest
-  - pipenv install
+  - pip install -q pipenv codecov
   - pipenv sync
-  - pytest  
-
-  
-
 script:
- - flake8
- - pytest libsensedata 
- 
+  - flake8
+  - pytest libsensedata
