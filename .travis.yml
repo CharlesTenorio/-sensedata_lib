@@ -2,12 +2,16 @@ language: python
 
 python:
   -3.8
+
 install:
-  - pip install -q pipenv codecov
+  - pip install pipenv pytest
+  - pipenv install
   - pipenv sync
+  - pytest              # <  
+
+  
 
 script:
  - flake8
  - pytest libsensedata --cov=libsensedata
- afeter_success:
-  - codecov
+ 
