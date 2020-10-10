@@ -7,11 +7,11 @@ install:
   - pip install pipenv pytest
   - pipenv install
   - pipenv sync
-  - pytest              # <  
+  - pytest  
 
   
 
 script:
  - flake8
- - pytest libsensedata --cov=libsensedata
+ - pytest libsensedata 
  
