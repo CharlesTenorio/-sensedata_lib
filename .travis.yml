@@ -1,11 +1,12 @@
-language: pytnon
+language: python
+
 python:
   -3.8
 install:
   - pip install -q pipenv codecov
   - pipenv sync
 
-scritp:
+script:
  - flake8
  - pytest libsensedata --cov=libsensedata
  afeter_success:
