@@ -8,9 +8,9 @@ verify_ssl = true
 [packages]
 pytest = "*"
 ipython = "*"
-httpx = "*"
 flake8 = "*"
 pytest-cov = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"

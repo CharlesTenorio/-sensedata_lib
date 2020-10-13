@@ -1,4 +1,4 @@
-import httpx
+import requests
 from abc import ABCMeta, abstractclassmethod
 
 URL_BASE_API = 'https://swapi.dev/api/'
@@ -7,7 +7,6 @@ URL_BASE_API = 'https://swapi.dev/api/'
 class UniversoStarWar(metaclass=ABCMeta):
     def __init__(self):
         self.url = URL_BASE_API
-        self.num_pagina = 10
 
     @abstractclassmethod
     def retorna_lista(self, recurso):
@@ -17,14 +16,14 @@ class UniversoStarWar(metaclass=ABCMeta):
 class Personagens(UniversoStarWar):
     def retorna_lista(self, recurso):
         url = self.url + recurso
-        list_personagen = httpx.get(url)
+        list_personagen = requests.get(url)
         return list_personagen
 
 
 class Naves(UniversoStarWar):
     def retorna_lista(self, recurso):
         url = self.url + recurso
-        list_naves = httpx.get(url)
+        list_naves = requests.get(url)
         return list_naves
 
 
